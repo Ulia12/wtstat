@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Статистика 20.06.2015</title>
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Время', 'Процент'],
+     ['02:00', 0],
+     ['06:00', 0],
+     ['10:00', 1.47],
+     ['14:00', 0],
+     ['18:00', 0],
+     ['22:00', 0]
+    ]);
+    var options = {
+     title: 'Статистика 20.06.2015',
+     hAxis: {title: 'Время'},
+     vAxis: {title: 'Процент'}
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
+    chart.draw(data, options);
+   }
+  </script>
+ </head>
+ <body>
+  <div id="oil" style="width: 500px; height: 400px;"></div>
+ </body>
+ </html>
