@@ -1,6 +1,6 @@
 # -*- coding: utf-8
 """
-Главный скрипт проекта
+Главный скрипт проекта.
 """
 import os
 from grab import Grab
